@@ -87,9 +87,9 @@ conn_params = {
 }
 
 
-lp = 'my_file2.txt'
+lp = 'my_file3.txt'
 sn = 'my_internal_named_stage'
-df = 'my_file2.txt'
+df = 'my_file3.txt'
 
 conn = snowflake.connector.connect(**conn_params)
 cur = conn.cursor()
