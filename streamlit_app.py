@@ -87,13 +87,13 @@ conn_params = {
 }
 
 
-lp = './my_file.txt'
+lp = 'my_file.txt'
 sn = 'my_internal_named_stage'
 df = 'my_file.txt'
 
 conn = snowflake.connector.connect(**conn_params)
 cur = conn.cursor()
-cur.execute(f"PUT 'file//{lp}' @{sn}")
+cur.execute(f"PUT '{lp}' @{sn}")
 #cur.exceute("show stages")
 #row = cur.fetchall()
 #streamlit.dataframe(row)
