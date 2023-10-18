@@ -92,7 +92,7 @@ conn_params = {
 
 conn = snowflake.connector.connect(**conn_params)
 cur = conn.cursor()
-cur.execute("SELECT * from fruit_load_list;")
+cur.execute("SELECT * from fruit_load_list")
 row = cur.fetchall()
 streamlit.dataframe(row)
 
