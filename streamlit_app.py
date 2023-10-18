@@ -80,19 +80,21 @@ conn_params = {
     'account':'fn72889.ap-south-1.aws',
     'user':'arjun05',
     'password':'Project@1',
-    'warehouse':'PC_RIVERY_WH',
-    'database':'PC_RIVERY_DB',
+    'warehouse':'COMPUTE_WH',
+    'database':'UTIL_DB',
     'schema':'PUBLIC',
     'role':'ACCOUNTADMIN'
 }
 
 
-# lp = r'C:\Users\Arjun.Goyal\my_file.txt'
-# sn = 'my_internal_named_stage'
+lp = r'C:\Users\Arjun.Goyal\my_file.txt'
+sn = 'my_internal_named_stage'
+df = 'my_file.txt'
 
 conn = snowflake.connector.connect(**conn_params)
 cur = conn.cursor()
-cur.execute("SELECT * from fruit_load_list")
+cur.execute(f"PUT 'file//{lp}' @{sn}/{df}")
+cur.exceute("show stages")
 row = cur.fetchall()
 streamlit.dataframe(row)
 
