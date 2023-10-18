@@ -80,8 +80,8 @@ conn_params = {
     'account':'fn72889.ap-south-1.aws',
     'user':'arjun05',
     'password':'Project@1',
-    'warehouse':'COMPUTE_WH',
-    'database':'UTIL_DB',
+    'warehouse':'PC_RIVERY_WH',
+    'database':'PC_RIVERY_DB',
     'schema':'PUBLIC',
     'role':'ACCOUNTADMIN'
 }
