@@ -87,7 +87,7 @@ conn_params = {
 }
 
 
-lp = r'C:\Users\Arjun.Goyal\my_file.txt'
+lp = 'my_file.txt'
 sn = 'my_internal_named_stage'
 df = 'my_file.txt'
 
