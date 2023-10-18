@@ -76,15 +76,16 @@ import snowflake.connector
 #     back_from_func = insert_row_snowflake(add_fruit)
 #     streamlit.text(back_from_func)
 
-conn_params = snowflake.connector.connect(
-    account='fn72889.ap-south-1.aws',
-    user='arjun05',
-    password='Project@1',
-    warehouse='COMPUTE_WH',
-    database='UTIL_DB',
-    schema='PUBLIC',
-    role='ACCOUNTADMIN'
-)
+conn_params = {
+    'account':'fn72889.ap-south-1.aws',
+    'user':'arjun05',
+    'password':'Project@1',
+    'warehouse':'COMPUTE_WH',
+    'database':'UTIL_DB',
+    'schema':'PUBLIC',
+    'role':'ACCOUNTADMIN'
+}
+
 
 # lp = r'C:\Users\Arjun.Goyal\my_file.txt'
 # sn = 'my_internal_named_stage'
