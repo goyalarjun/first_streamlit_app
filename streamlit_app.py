@@ -93,8 +93,8 @@ df = 'my_file.txt'
 
 conn = snowflake.connector.connect(**conn_params)
 cur = conn.cursor()
-cur.execute(f"PUT 'file//{lp}' @{sn}/{df}")
-cur.exceute("show stages")
-row = cur.fetchall()
-streamlit.dataframe(row)
+cur.execute(f"PUT 'file//{lp}' @{sn}")
+#cur.exceute("show stages")
+#row = cur.fetchall()
+#streamlit.dataframe(row)
 
